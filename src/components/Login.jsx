@@ -14,8 +14,11 @@ const Login = () => {
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+ 
 
   const handleLogin = async () => {
+
+   
     try {
       const res = await axios.post(
         BASE_URL + `/login`,
@@ -98,7 +101,7 @@ const Login = () => {
                 <span className="label-text">Password</span>
               </div>
               <input
-                type="text"
+                type="password"
                 value={password}
                 placeholder="Enter the password"
                 className="input input-bordered w-full max-w-xs"
